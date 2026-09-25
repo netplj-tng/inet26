@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Digital Information</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Digital Information LP3I Cimone" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+	
+	
+	
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/style2.css" rel="stylesheet">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+
+
+	</head>
+
+/*Code Fadlan Al Mukhsi
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("ujikom-modal");
+    const closeButton = document.getElementById("ujikom-close");
+    const closeButtonBottom = document.getElementById("ujikom-button-close");
+
+    const TWO_MINUTES = 2 * 60 * 1000;
+
+    let hideTimer;
+    let showTimer;
+
+
+    /* ==============================
+       TAMPILKAN POPUP
+    ============================== */
+
+    function showUjikom() {
+
+        if (!modal) return;
+
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+
+        modal.style.display = "flex";
+        modal.setAttribute("aria-hidden", "false");
+
+        /*
+         * Popup otomatis hilang
+         * setelah 2 menit
+         */
+
+        hideTimer = setTimeout(function () {
+
+            hideUjikom();
+
+        }, TWO_MINUTES);
+    }
+
+
+    /* ==============================
+       TUTUP POPUP
+    ============================== */
+
+    function hideUjikom() {
+
+        if (!modal) return;
+
+        clearTimeout(hideTimer);
+        clearTimeout(showTimer);
+
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+
+
+        /*
+         * Muncul kembali setelah 2 menit
+         */
+
+        showTimer = setTimeout(function () {
+
+            showUjikom();
+
+        }, TWO_MINUTES);
+    }
+
+
+    /* ==============================
+       TOMBOL X
+    ============================== */
+
+    if (closeButton) {
+
+        closeButton.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            hideUjikom();
+
+        });
+
+    }
+
+
+    /* ==============================
+       TOMBOL TUTUP
+    ============================== */
+
+    if (closeButtonBottom) {
+
+        closeButtonBottom.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            hideUjikom();
+
+        });
+
+    }
+
+
+    /* ==============================
+       KLIK AREA LUAR POPUP
+    ============================== */
+
+    if (modal) {
+
+        modal.addEventListener("click", function (event) {
+
+            if (event.target === modal) {
+
+                hideUjikom();
+
+            }
+
+        });
+
+    }
+
+
+    /* ==============================
+       TOMBOL ESC
+    ============================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            if (modal && modal.style.display === "flex") {
+
+                hideUjikom();
+
+            }
+
+        }
+
+    });
+
+
+    /* ==============================
+       TAMPILKAN PERTAMA KALI
+    ============================== */
+
+    showUjikom();
+
+});
+</script>
+
+<!-- ===== POPUP INFORMASI UJIKOM ===== -->
+
+<!-- POPUP INFORMASI UJIKOM -->
+<div id="ujikom-modal" class="ujikom-overlay" aria-hidden="true">
+
+    <div class="ujikom-modal-box"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="ujikom-title">
+
+        <!-- Tombol X -->
+        <button type="button"
+                id="ujikom-close"
+                class="ujikom-close"
+                aria-label="Tutup">
+            &times;
+        </button>
+
+        <div class="ujikom-icon">
+            📢
+        </div>
+
+        <h2 id="ujikom-title">
+            INFORMASI UJIKOM
+        </h2>
+
+        <p class="ujikom-subtitle">
+            Pelaksanaan Uji Kompetensi (Ujikom)
+        </p>
+
+        <div class="ujikom-date">
+
+            <div class="date-box">
+                <strong>24</strong>
+                <span>OKTOBER</span>
+				<br
+				<Span>TINGKAT 2 (SEMESTER 3)</span>
+            </div>
+
+            <div class="date-box">
+                <strong>25</strong>
+                <span>OKTOBER</span>
+				<br
+				<span>TINGKAT 3 (SEMESTER 5)</span>
+            </div>
+
+        </div>
+
+        <p class="ujikom-note">
+            Mohon diperhatikan dan dipersiapkan dengan baik
+            sesuai jadwal yang telah ditentukan.
+        </p>
+
+		<p class="ujikom-note">
+            Galeri Foto Sudah Update..
+        </p>
+
+        <!-- Tombol TUTUP -->
+        <button type="button"
+                id="ujikom-button-close"
+                class="ujikom-action-btn">
+            TUTUP
+        </button>
+
+
+    </div>
+
+</div>
+/* ===== AKHIR POPUP INFORMASI UJIKOM ===== */
+	<body>
+	
+	
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="fh5co-top-logo">
+				<div id="fh5co-text">
+					<script type="text/javascript">
+					window.setTimeout("renderDate()",1);
+					function renderDate(){
+					var mydate = new Date();
+					var year = mydate.getYear();
+					if (year < 2000) {
+					if (document.all)
+					year = "19" + year;
+					else
+					year += 1900;
+					}
+					var day = mydate.getDay();
+					var month = mydate.getMonth();
+					var daym = mydate.getDate();
+					if (daym < 10)
+					daym = "0" + daym;
+					var hours = mydate.getHours();
+					var minutes = mydate.getMinutes();
+					var seconds = mydate.getSeconds();
+					var dn = "WIB";
+					if (hours >= 24) {
+					dn = "WIB";
+					hours = hours - 12;
+					}
+					if (hours == 0)
+					hours = 0;
+					if (hours <= 9)
+					hours = "0" + hours;
+					if (minutes <= 9)
+					minutes = "0" + minutes;
+					if (seconds <= 9)
+					seconds = "0" + seconds;
+					document.getElementById("jam").innerHTML = " "+"<b>"+hours+":"+minutes+":"+seconds+"</b> "+dn;setTimeout("renderDate()",1000)
+					}
+					</script>
+					<div id="jam" style="padding:5px;width:auto;"></div>
+				</div> 
+			</div> 
+			
+			<div class="fh5co-top-menu menu-1 text-center">
+				<ul>
+					<li>
+						<b>Digital Information</b>
+					</li>
+				</ul>
+			</div>
+			
+			
+			<div class="fh5co-top-social menu-1 text-right">
+				<ul class="fh5co-social">
+					<li><font color="black" size="2">
+						<script type="text/javascript">
+						var waktu=new Date()
+						var tahun=waktu.getFullYear()
+						var hari=waktu.getDay()
+						var bulan=waktu.getMonth()
+						var tanggal=waktu.getDate()
+						if (tanggal < 7) {tanggal="0"+tanggal}
+						var hariarray=new Array("Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu")
+						var bulanarray=new Array("JAN","FEB","MAR","APR","MEI","JUN","JUL","AGU","SEP","OKT","NOV","DES")
+						document.write(hariarray[hari]+", "+tanggal+"-"+bulanarray[bulan]+"-"+tahun)
+						</script></font>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	
+	
+	<div> <!--div id="fh5co-work"--><br>
+		<div class="container">
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="1-marketing.html">
+						<div class="work-grid" style="background-image:url(images/home/1-marketing.gif);">
+							<div class="inner">
+								<div class="desc">
+									<h3>MARKETING</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="2-keuangan.html">
+						<div class="work-grid" style="background-image:url(images/home/2-finance.png);">
+							<div class="inner">
+								<div class="desc">
+									<h3>FINANCE</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="3-akademik.html">
+						<div class="work-grid" style="background-image:url(images/home/3-academics.png);">
+							<div class="inner">
+								<div class="desc">
+									<h3>ACADEMIC</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="4-cnp.html">
+						<div class="work-grid" style="background-image:url(images/home/4-cnp.png);">
+							<div class="inner">
+								<div class="desc">
+									<h3>C & P</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="5-galeri3.html">
+						<div class="work-grid" style="background-image:url(images/home/5-galeri.png);">
+							<div class="inner">
+								<div class="desc">
+									<h3>GALLERY</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="6-ukm.html">
+						<div class="work-grid" style="background-image:url(images/home/6-ukm.gif);">
+							<div class="inner">
+								<div class="desc">
+									<h3>COMMUNITY</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="7-rules.html">
+						<div class="work-grid" style="background-image:url(images/home/7-rules.png);">
+							<div class="inner">
+								<div class="desc">
+									<h3>RULES</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<a class="work" href="8-profil.html">
+						<div class="work-grid" style="background-image:url(images/home/8-profil.gif);">
+							<div class="inner">
+								<div class="desc">
+									<h3>PROFILE</h3>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<!-- INI UNTUK POPUP BERANDA peninggalan bang raply
+<div id="welcome-modal" class="modal-overlay">
+    <div class="modal-content">
+        
+		<span class="close-btn" onclick="closeModal()">&times;</span><br/>
+        
+		<h2>INFORMASI</h2>
+        <p>Score TOEIC dapat kamu lihat<br/>di halaman Informasi Akademik</p>
+		<img src="images/content/cbt.png">
+        <a href="3-toeic.html"><button class="action-btn">Cek Score</button></a>
+		<button class="action-btn" onclick="closeModal()">OK</button>
+    </div>
+</div>	 -->
+
+
+<style>
+/* Background gelap di belakang pop-up */
+.modal-overlay {
+    display: flex; /* Menggunakan flex agar konten di tengah */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Kotak Pesan */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+}
+
+/* RESPONSIVE IMAGE: Mencegah gambar merusak layout modal */
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Tombol Close (X) */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover { color: #000; }
+
+/* Tombol Aksi */
+.action-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.action-btn:hover { background-color: #0056b3; }
+</style>
+
+<script>
+function closeModal() {
+    // Hanya menyembunyikan elemen saat tombol diklik
+    document.getElementById("welcome-modal").style.display = "none";
+}
+
+// Opsi Tambahan: Menutup popup jika user mengklik area gelap di luar kotak modal
+window.onclick = function(event) {
+    var modal = document.getElementById("welcome-modal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+	
+
+	<!--footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> &amp; <a href="http://blog.gessato.com/" target="_blank">Gessato</a></small>
+					</p>
+					
+					
+					
+				</div>
+			</div>
+
+		</div>
+	</footer-->
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+
+
+
+
+	<!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>
+

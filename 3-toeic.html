@@ -1,0 +1,1187 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Digital Information</title>
+	
+	<style>
+        table {
+            border-collapse: collapse;
+			width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: GREY;
+            color: white;
+        }
+		tr:hover {background-color: #f5f5f5;}
+
+        #toeicTable thead th { text-align: center; vertical-align: middle; }
+        #toeicTable td:nth-child(1),
+        #toeicTable td:nth-child(3),
+        #toeicTable td:nth-child(4),
+        #toeicTable td:nth-child(5),
+        #toeicTable td:nth-child(6),
+        #toeicTable td:nth-child(7),
+        #toeicTable td:nth-child(8) { text-align: center; }
+        #toeicTable tbody tr.mencapai-target { background-color: #eef8ee; }
+        #toeicTable tbody tr.belum-ada-skor { color: #777; background-color: #fafafa; }
+        .table-wrapper { overflow-x: auto; margin-top: 15px; }
+    </style>
+	
+	<!-- dibawah ini script auto ke halaman tertentu setelah beberapa detik/menit -->
+	<meta http-equiv="refresh" content="300;url=index.html">
+	<!-- angka 300 berarti detik (300 detik = 5 menit) dan index.html adalah halaman beranda, ubah sesuai kebutuhan-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="fh5co-top-logo">
+				
+				<div id="fh5co-text">
+					<script type="text/javascript">
+					window.setTimeout("renderDate()",1);
+					function renderDate(){
+					var mydate = new Date();
+					var year = mydate.getYear();
+					if (year < 2000) {
+					if (document.all)
+					year = "19" + year;
+					else
+					year += 1900;
+					}
+					var day = mydate.getDay();
+					var month = mydate.getMonth();
+					var daym = mydate.getDate();
+					if (daym < 10)
+					daym = "0" + daym;
+					var hours = mydate.getHours();
+					var minutes = mydate.getMinutes();
+					var seconds = mydate.getSeconds();
+					var dn = "WIB";
+					if (hours >= 24) {
+					dn = "WIB";
+					hours = hours - 12;
+					}
+					if (hours == 0)
+					hours = 0;
+					if (hours <= 9)
+					hours = "0" + hours;
+					if (minutes <= 9)
+					minutes = "0" + minutes;
+					if (seconds <= 9)
+					seconds = "0" + seconds;
+					document.getElementById("jam").innerHTML = " "+"<b>"+hours+":"+minutes+":"+seconds+"</b> "+dn;setTimeout("renderDate()",1000)
+					}
+					</script>
+					<div id="jam" style="padding:5px;width:auto;"></div>
+				</div>
+			</div>
+			
+			<div class="fh5co-top-menu menu-1 text-center">
+				<ul>
+					<li>
+						<b>TOEIC Score</b>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="fh5co-top-social menu-1 text-right">
+				<ul class="fh5co-social">
+					<li><a href="3-akademik.html"><font size='3'>KEMBALI</font> <b><font color='red'>[X]</font></b></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="testimony animate-box">
+					<b>TOEIC SCORE SEMESTER GENAP TAHUN AKADEMIK 2025–2026</b>
+					<p>Daftar nilai Reading, Listening, Total Score, dan Level mahasiswa. Data diurutkan berdasarkan Total Score tertinggi; mahasiswa yang belum memiliki skor ditempatkan paling bawah.</p>
+					
+	<div class="table-wrapper">
+<table id="toeicTable">
+      <thead>
+          <tr>
+            <th rowspan="2">&nbsp;No</th>
+            <th rowspan="2">&nbsp;Nama Mahasiswa</th>
+            <th rowspan="2">&nbsp;Prodi</th>
+            <th rowspan="2">&nbsp;Tingkat</th>
+            <th colspan="2">&nbsp;Score</th>
+            <th rowspan="2">&nbsp;Total</th>
+            <th rowspan="2">&nbsp;Level</th>
+          </tr>
+          <tr>
+            <th>&nbsp;Reading</th>
+            <th>&nbsp;Listening</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr data-prodi="KA" data-tingkat="4" data-level="5" data-total="655" class="ada-skor mencapai-target">
+          <td>1</td>
+          <td class="name">Murdi Dayu Pratama</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>330</td>
+          <td>325</td>
+          <td class="total">655</td>
+          <td>Level 5</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="4" data-total="515" class="ada-skor mencapai-target">
+          <td>2</td>
+          <td class="name">Adinda Dwi Rahma Putri</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>195</td>
+          <td>320</td>
+          <td class="total">515</td>
+          <td>Level 4</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="4" data-total="435" class="ada-skor mencapai-target">
+          <td>3</td>
+          <td class="name">Reynaldi Bram Pardede</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>175</td>
+          <td>260</td>
+          <td class="total">435</td>
+          <td>Level 4</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="4" data-total="435" class="ada-skor mencapai-target">
+          <td>4</td>
+          <td class="name">Hoviah Houlida</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>180</td>
+          <td>255</td>
+          <td class="total">435</td>
+          <td>Level 4</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="4" data-total="430" class="ada-skor mencapai-target">
+          <td>5</td>
+          <td class="name">Renata Aulia Rasti</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>180</td>
+          <td>250</td>
+          <td class="total">430</td>
+          <td>Level 4</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="4" data-total="420" class="ada-skor mencapai-target">
+          <td>6</td>
+          <td class="name">Santi Lokautari</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>175</td>
+          <td>245</td>
+          <td class="total">420</td>
+          <td>Level 4</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="4" data-total="415" class="ada-skor mencapai-target">
+          <td>7</td>
+          <td class="name">Zulfan Al Fauzan</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>160</td>
+          <td>255</td>
+          <td class="total">415</td>
+          <td>Level 4</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="400" class="ada-skor">
+          <td>8</td>
+          <td class="name">Ahmad Faqih Mubarok</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>170</td>
+          <td>230</td>
+          <td class="total">400</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="3" data-total="395" class="ada-skor">
+          <td>9</td>
+          <td class="name">Sahwala Istikomariah</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>145</td>
+          <td>250</td>
+          <td class="total">395</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="3" data-total="390" class="ada-skor">
+          <td>10</td>
+          <td class="name">Zaskia Asshila Salwa</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>180</td>
+          <td>210</td>
+          <td class="total">390</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="380" class="ada-skor">
+          <td>11</td>
+          <td class="name">Ridho Fatu Rohman</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>170</td>
+          <td>210</td>
+          <td class="total">380</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="375" class="ada-skor">
+          <td>12</td>
+          <td class="name">Muhammad Hafidz Fauzi</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>125</td>
+          <td>250</td>
+          <td class="total">375</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="355" class="ada-skor">
+          <td>13</td>
+          <td class="name">Nabila Kurniawati</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>140</td>
+          <td>215</td>
+          <td class="total">355</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="355" class="ada-skor">
+          <td>14</td>
+          <td class="name">Aninda Nurrizki</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>160</td>
+          <td>195</td>
+          <td class="total">355</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="355" class="ada-skor">
+          <td>15</td>
+          <td class="name">Rizki Andriyan</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>170</td>
+          <td>185</td>
+          <td class="total">355</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="350" class="ada-skor">
+          <td>16</td>
+          <td class="name">Muhammad Daffa Firdaus</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>95</td>
+          <td>255</td>
+          <td class="total">350</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="350" class="ada-skor">
+          <td>17</td>
+          <td class="name">Nesha Audi Maulidia</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>140</td>
+          <td>210</td>
+          <td class="total">350</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="3" data-total="345" class="ada-skor">
+          <td>18</td>
+          <td class="name">Mochamad Fauzan Fadhillah</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>125</td>
+          <td>220</td>
+          <td class="total">345</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="340" class="ada-skor">
+          <td>19</td>
+          <td class="name">Advin Rabel</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>150</td>
+          <td>190</td>
+          <td class="total">340</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="340" class="ada-skor">
+          <td>20</td>
+          <td class="name">Vita Widyasari</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>175</td>
+          <td>165</td>
+          <td class="total">340</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="3" data-total="335" class="ada-skor">
+          <td>21</td>
+          <td class="name">Eka Putra Ananda</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>160</td>
+          <td>175</td>
+          <td class="total">335</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="325" class="ada-skor">
+          <td>22</td>
+          <td class="name">Olivia Ferisca</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>70</td>
+          <td>255</td>
+          <td class="total">325</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="3" data-total="320" class="ada-skor">
+          <td>23</td>
+          <td class="name">Zulfa Nailatul Fauziyah</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>145</td>
+          <td>175</td>
+          <td class="total">320</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="315" class="ada-skor">
+          <td>24</td>
+          <td class="name">Adelia Berliana Syaryanti</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>125</td>
+          <td>190</td>
+          <td class="total">315</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="310" class="ada-skor">
+          <td>25</td>
+          <td class="name">Bella Puspita</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>115</td>
+          <td>195</td>
+          <td class="total">310</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="3" data-total="305" class="ada-skor">
+          <td>26</td>
+          <td class="name">Zaskya Rahma Albasriani</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>120</td>
+          <td>185</td>
+          <td class="total">305</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="3" data-total="305" class="ada-skor">
+          <td>27</td>
+          <td class="name">Syadidul Azmi Saefulloh</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>125</td>
+          <td>180</td>
+          <td class="total">305</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="305" class="ada-skor">
+          <td>28</td>
+          <td class="name">Rajwa Nailal Khusna</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>145</td>
+          <td>160</td>
+          <td class="total">305</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="295" class="ada-skor">
+          <td>29</td>
+          <td class="name">Muhammad Alif Fadillah Said</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>65</td>
+          <td>230</td>
+          <td class="total">295</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="3" data-total="295" class="ada-skor">
+          <td>30</td>
+          <td class="name">Ita Sintia</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>85</td>
+          <td>210</td>
+          <td class="total">295</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="3" data-total="295" class="ada-skor">
+          <td>31</td>
+          <td class="name">Dewi Lutfiah Mufti</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>120</td>
+          <td>175</td>
+          <td class="total">295</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="3" data-total="290" class="ada-skor">
+          <td>32</td>
+          <td class="name">Syifa Rezkia</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>115</td>
+          <td>175</td>
+          <td class="total">290</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="3" data-total="290" class="ada-skor">
+          <td>33</td>
+          <td class="name">Ahmad Thoriq Rahmandani</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>145</td>
+          <td>145</td>
+          <td class="total">290</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="3" data-total="285" class="ada-skor">
+          <td>34</td>
+          <td class="name">Didier Aliefh</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>90</td>
+          <td>195</td>
+          <td class="total">285</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="3" data-total="285" class="ada-skor">
+          <td>35</td>
+          <td class="name">Azkiya Fattaya</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>120</td>
+          <td>165</td>
+          <td class="total">285</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="3" data-total="280" class="ada-skor">
+          <td>36</td>
+          <td class="name">Pebrian</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>115</td>
+          <td>165</td>
+          <td class="total">280</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="3" data-total="280" class="ada-skor">
+          <td>37</td>
+          <td class="name">Fayzha Aurelya Sutisna</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>120</td>
+          <td>160</td>
+          <td class="total">280</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="275" class="ada-skor">
+          <td>38</td>
+          <td class="name">Adinda Nur Irawanti</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>90</td>
+          <td>185</td>
+          <td class="total">275</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="3" data-total="270" class="ada-skor">
+          <td>39</td>
+          <td class="name">Anselmus Tungga</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>90</td>
+          <td>180</td>
+          <td class="total">270</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="3" data-total="270" class="ada-skor">
+          <td>40</td>
+          <td class="name">Alya Fatma Syarifah</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>95</td>
+          <td>175</td>
+          <td class="total">270</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="3" data-total="270" class="ada-skor">
+          <td>41</td>
+          <td class="name">Finka Elena Putri</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>110</td>
+          <td>160</td>
+          <td class="total">270</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="260" class="ada-skor">
+          <td>42</td>
+          <td class="name">Fajri Ramadhan</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>80</td>
+          <td>180</td>
+          <td class="total">260</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="3" data-total="260" class="ada-skor">
+          <td>43</td>
+          <td class="name">Chelsea Putri Rahayu</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>90</td>
+          <td>170</td>
+          <td class="total">260</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="3" data-total="260" class="ada-skor">
+          <td>44</td>
+          <td class="name">Muhamad Ozi Tibroni</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>110</td>
+          <td>150</td>
+          <td class="total">260</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="3" data-total="255" class="ada-skor">
+          <td>45</td>
+          <td class="name">Eka Mulia Rahmadani</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>40</td>
+          <td>215</td>
+          <td class="total">255</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="3" data-total="255" class="ada-skor">
+          <td>46</td>
+          <td class="name">Eva Gista Pratiwi</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>90</td>
+          <td>165</td>
+          <td class="total">255</td>
+          <td>Level 3</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="2" data-total="250" class="ada-skor">
+          <td>47</td>
+          <td class="name">Elok Artha Kinasih</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>50</td>
+          <td>200</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="2" data-total="250" class="ada-skor">
+          <td>48</td>
+          <td class="name">Muhamad Al Farizi</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>70</td>
+          <td>180</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="250" class="ada-skor">
+          <td>49</td>
+          <td class="name">Astri Firda Aminati</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>80</td>
+          <td>170</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="2" data-total="250" class="ada-skor">
+          <td>50</td>
+          <td class="name">Muhammad Akbar Agustian</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>85</td>
+          <td>165</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="2" data-total="250" class="ada-skor">
+          <td>51</td>
+          <td class="name">Tridevi Wulandari</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>85</td>
+          <td>165</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="250" class="ada-skor">
+          <td>52</td>
+          <td class="name">Naila Salsabila</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>90</td>
+          <td>160</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="2" data-total="250" class="ada-skor">
+          <td>53</td>
+          <td class="name">Siti Rohimah</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>110</td>
+          <td>140</td>
+          <td class="total">250</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="2" data-total="245" class="ada-skor">
+          <td>54</td>
+          <td class="name">Keira Bunga Aprilicia</td>
+          <td>MI</td>
+          <td>2</td>
+          <td>60</td>
+          <td>185</td>
+          <td class="total">245</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="245" class="ada-skor">
+          <td>55</td>
+          <td class="name">Muhammad Nandi</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>80</td>
+          <td>165</td>
+          <td class="total">245</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="2" data-total="245" class="ada-skor">
+          <td>56</td>
+          <td class="name">Fendy Pradana</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>110</td>
+          <td>135</td>
+          <td class="total">245</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="2" data-total="245" class="ada-skor">
+          <td>57</td>
+          <td class="name">May Afifah Berlianty</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>110</td>
+          <td>135</td>
+          <td class="total">245</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="2" data-total="240" class="ada-skor">
+          <td>58</td>
+          <td class="name">Ratna Dewanti Astutiningtias</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>50</td>
+          <td>190</td>
+          <td class="total">240</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="2" data-total="240" class="ada-skor">
+          <td>59</td>
+          <td class="name">Mohammad Angga Putra</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>80</td>
+          <td>160</td>
+          <td class="total">240</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="235" class="ada-skor">
+          <td>60</td>
+          <td class="name">Resti Fujianih</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>50</td>
+          <td>185</td>
+          <td class="total">235</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="2" data-total="235" class="ada-skor">
+          <td>61</td>
+          <td class="name">Atna Aulia Khodijah</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>85</td>
+          <td>150</td>
+          <td class="total">235</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="235" class="ada-skor">
+          <td>62</td>
+          <td class="name">Putry Melida</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>85</td>
+          <td>150</td>
+          <td class="total">235</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="235" class="ada-skor">
+          <td>63</td>
+          <td class="name">Raisya Salsabila Pratama</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>90</td>
+          <td>145</td>
+          <td class="total">235</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="235" class="ada-skor">
+          <td>64</td>
+          <td class="name">Arya Gilang Ferdiansyah</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>95</td>
+          <td>140</td>
+          <td class="total">235</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="230" class="ada-skor">
+          <td>65</td>
+          <td class="name">Ayu Tresna Asih</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>60</td>
+          <td>170</td>
+          <td class="total">230</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="230" class="ada-skor">
+          <td>66</td>
+          <td class="name">Daniel Trisakti</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>80</td>
+          <td>150</td>
+          <td class="total">230</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="2" data-total="230" class="ada-skor">
+          <td>67</td>
+          <td class="name">Kayla Hayya Salsabila</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>90</td>
+          <td>140</td>
+          <td class="total">230</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="225" class="ada-skor">
+          <td>68</td>
+          <td class="name">Fitri Tabela</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>60</td>
+          <td>165</td>
+          <td class="total">225</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="225" class="ada-skor">
+          <td>69</td>
+          <td class="name">Bunga Citra Lestari</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>80</td>
+          <td>145</td>
+          <td class="total">225</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="220" class="ada-skor">
+          <td>70</td>
+          <td class="name">Nabila Safitri</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>50</td>
+          <td>170</td>
+          <td class="total">220</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="2" data-total="215" class="ada-skor">
+          <td>71</td>
+          <td class="name">Feby Fitriani Kriskianto</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>65</td>
+          <td>150</td>
+          <td class="total">215</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="210" class="ada-skor">
+          <td>72</td>
+          <td class="name">Eka Yuliyanti</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>25</td>
+          <td>185</td>
+          <td class="total">210</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="2" data-level="2" data-total="210" class="ada-skor">
+          <td>73</td>
+          <td class="name">Sudinastiyan</td>
+          <td>KA</td>
+          <td>2</td>
+          <td>70</td>
+          <td>140</td>
+          <td class="total">210</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="2" data-total="210" class="ada-skor">
+          <td>74</td>
+          <td class="name">Wanda Uliyatul Aulia</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>70</td>
+          <td>140</td>
+          <td class="total">210</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="2" data-total="205" class="ada-skor">
+          <td>75</td>
+          <td class="name">Rifki Putra Purnama</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>65</td>
+          <td>140</td>
+          <td class="total">205</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="2" data-total="205" class="ada-skor">
+          <td>76</td>
+          <td class="name">Solehah</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>95</td>
+          <td>110</td>
+          <td class="total">205</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="200" class="ada-skor">
+          <td>77</td>
+          <td class="name">Qurratu Aini Mardiliah</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>35</td>
+          <td>165</td>
+          <td class="total">200</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="2" data-total="200" class="ada-skor">
+          <td>78</td>
+          <td class="name">Fauzan Nurzaman</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td>70</td>
+          <td>130</td>
+          <td class="total">200</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="190" class="ada-skor">
+          <td>79</td>
+          <td class="name">Dhea Hermalinda Putri</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>45</td>
+          <td>145</td>
+          <td class="total">190</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="2" data-total="185" class="ada-skor">
+          <td>80</td>
+          <td class="name">Rifki Syahdan Firdaus</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>65</td>
+          <td>120</td>
+          <td class="total">185</td>
+          <td>Level 2</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="1" data-total="180" class="ada-skor">
+          <td>81</td>
+          <td class="name">Eka Aulia Salsabila</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>30</td>
+          <td>150</td>
+          <td class="total">180</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="1" data-total="180" class="ada-skor">
+          <td>82</td>
+          <td class="name">Intan Narini Pratiwi</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>30</td>
+          <td>150</td>
+          <td class="total">180</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="1" data-total="175" class="ada-skor">
+          <td>83</td>
+          <td class="name">Reza Aulia</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td>25</td>
+          <td>150</td>
+          <td class="total">175</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="1" data-total="170" class="ada-skor">
+          <td>84</td>
+          <td class="name">Ahmad Syaki Pratama Wibowo</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>30</td>
+          <td>140</td>
+          <td class="total">170</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="1" data-total="165" class="ada-skor">
+          <td>85</td>
+          <td class="name">Siti Zahra Zamaika</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>50</td>
+          <td>115</td>
+          <td class="total">165</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="1" data-total="165" class="ada-skor">
+          <td>86</td>
+          <td class="name">Olga Lukmanul Hakim</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>95</td>
+          <td>70</td>
+          <td class="total">165</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="1" data-total="155" class="ada-skor">
+          <td>87</td>
+          <td class="name">Aditya Saputra</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>35</td>
+          <td>120</td>
+          <td class="total">155</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="KA" data-tingkat="4" data-level="1" data-total="135" class="ada-skor">
+          <td>88</td>
+          <td class="name">Ahmad Patah</td>
+          <td>KA</td>
+          <td>4</td>
+          <td>35</td>
+          <td>100</td>
+          <td class="total">135</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="1" data-total="115" class="ada-skor">
+          <td>89</td>
+          <td class="name">Muhamad Dzaky Nur&#x27;kholis</td>
+          <td>MI</td>
+          <td>4</td>
+          <td>20</td>
+          <td>95</td>
+          <td class="total">115</td>
+          <td>Level 1</td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="" data-total="" class="belum-ada-skor">
+          <td>90</td>
+          <td class="name">Hana Sulista</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td class="total"></td>
+          <td></td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="4" data-level="" data-total="" class="belum-ada-skor">
+          <td>91</td>
+          <td class="name">Imam Rosidin</td>
+          <td>ABI</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td class="total"></td>
+          <td></td>
+        </tr>
+        <tr data-prodi="ABI" data-tingkat="2" data-level="" data-total="" class="belum-ada-skor">
+          <td>92</td>
+          <td class="name">Lenka Jevera Yodari</td>
+          <td>ABI</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td class="total"></td>
+          <td></td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="" data-total="" class="belum-ada-skor">
+          <td>93</td>
+          <td class="name">M. Rizki Ramadhani</td>
+          <td>MI</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td class="total"></td>
+          <td></td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="2" data-level="" data-total="" class="belum-ada-skor">
+          <td>94</td>
+          <td class="name">Rafly Riza Prasetyo</td>
+          <td>MI</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td class="total"></td>
+          <td></td>
+        </tr>
+        <tr data-prodi="MI" data-tingkat="4" data-level="" data-total="" class="belum-ada-skor">
+          <td>95</td>
+          <td class="name">Silfi Febriyanti</td>
+          <td>MI</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td class="total"></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+	<br/>
+	TOEIC Score ini menjadi ajang mengasah kemampuan mahasiswa/i sebelum kegiatan TOEIC ITC berlangsung.<br/>
+	Setiap mahasiswa ditargetkan untuk mencapai TOEIC Score minimal 405.
+
+					</div>
+				</div>
+			</div>
+
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>DIGITAL INFORMATION</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> &amp; <a href="http://blog.gessato.com/" target="_blank">Gessato</a></small>
+					</p>
+					
+					
+					
+				</div>
+			</div>
+
+		</div>
+	</footer-->
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

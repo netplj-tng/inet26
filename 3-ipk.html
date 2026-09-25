@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Digital Information</title>
+	
+	<style>
+        table {
+            border-collapse: collapse;
+			width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: GREY;
+            color: white;
+        }
+		tr:hover {background-color: #f5f5f5;}
+    </style>
+	
+	<!-- dibawah ini script auto ke halaman tertentu setelah beberapa detik/menit -->
+	<meta http-equiv="refresh" content="300;url=index.html">
+	<!-- angka 300 berarti detik (300 detik = 5 menit) dan index.html adalah halaman beranda, ubah sesuai kebutuhan-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="fh5co-top-logo">
+				
+				<div id="fh5co-text">
+					<script type="text/javascript">
+					window.setTimeout("renderDate()",1);
+					function renderDate(){
+					var mydate = new Date();
+					var year = mydate.getYear();
+					if (year < 2000) {
+					if (document.all)
+					year = "19" + year;
+					else
+					year += 1900;
+					}
+					var day = mydate.getDay();
+					var month = mydate.getMonth();
+					var daym = mydate.getDate();
+					if (daym < 10)
+					daym = "0" + daym;
+					var hours = mydate.getHours();
+					var minutes = mydate.getMinutes();
+					var seconds = mydate.getSeconds();
+					var dn = "WIB";
+					if (hours >= 24) {
+					dn = "WIB";
+					hours = hours - 12;
+					}
+					if (hours == 0)
+					hours = 0;
+					if (hours <= 9)
+					hours = "0" + hours;
+					if (minutes <= 9)
+					minutes = "0" + minutes;
+					if (seconds <= 9)
+					seconds = "0" + seconds;
+					document.getElementById("jam").innerHTML = " "+"<b>"+hours+":"+minutes+":"+seconds+"</b> "+dn;setTimeout("renderDate()",1000)
+					}
+					</script>
+					<div id="jam" style="padding:5px;width:auto;"></div>
+				</div>
+			</div>
+			
+			<div class="fh5co-top-menu menu-1 text-center">
+				<ul>
+					<li>
+						<b>IPK LEADERBOARD</b>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="fh5co-top-social menu-1 text-right">
+				<ul class="fh5co-social">
+					<li><a href="3-akademik.html"><font size='3'>KEMBALI</font> <b><font color='red'>[X]</font></b></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="testimony animate-box">
+					<b>TOP 30 MAHASISWA</b>
+					<p>Dengan IPK Terbaik di Semester Berjalan
+					
+	<table>
+        <tr>
+            <th>&nbsp;POSISI</th>
+            <th>&nbsp;NAMA MAHASISWA</th>
+            <th>&nbsp;IPK</th>
+            <th>&nbsp;PROGRAM STUDI</th>
+			<th>&nbsp;SEMESTER</th>
+        </tr>
+        <tr>
+         <td>&nbsp;01</td>
+         <td>&nbsp;M. Nurfathan Athaillah Humaidi</td>
+         <td>&nbsp;3.95</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;5</td>
+      </tr>
+      <tr>
+         <td>&nbsp;02</td>
+         <td>&nbsp;Hikmal Maulana Fajar</td>
+         <td>&nbsp;3.86</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;5</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;03</td>
+         <td>&nbsp;Zulfan Al Fauzan</td>
+         <td>&nbsp;3.85</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;3</td>
+      </tr>
+      <tr>
+         <td>&nbsp;04</td>
+         <td>&nbsp;Ridho Fatu Rohman</td>
+         <td>&nbsp;3.85</td>
+         <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;1</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;05</td>
+         <td>&nbsp;Raisya Salsabila Pratama</td>
+         <td>&nbsp;3.84</td>
+         <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;1</td>
+      </tr>
+      <tr>
+         <td>&nbsp;06</td>
+         <td>&nbsp;Adinda Dwi Rahma Putri</td>
+         <td>&nbsp;3.81</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;3</td>
+      </tr>
+      <tr>
+         <td>&nbsp;07</td>
+         <td>&nbsp;Nining Suningsih</td>
+         <td>&nbsp;3.78</td>
+         <td>&nbsp;Administrasi Bisnis Internasional</td>
+         <td>&nbsp;5</td>
+      </tr>
+      <tr>
+         <td>&nbsp;08</td>
+         <td>&nbsp;Nabila Kurniawati</td>
+         <td>&nbsp;3.78</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;3</td>
+      </tr>
+      <tr>
+         <td>&nbsp;09</td>
+         <td>&nbsp;Chelsea Putri Rahayu</td>
+         <td>&nbsp;3.78</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;1</td>
+      </tr>
+      <tr>
+         <td>&nbsp;10</td>
+         <td>&nbsp;Eka Putra Ananda</td>
+         <td>&nbsp;3.76</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;1</td>
+      </tr>
+      <tr>
+         <td>&nbsp;11</td>
+         <td>&nbsp;Mochamad Fauzan Fadhillah</td>
+         <td>&nbsp;3.76</td>
+         <td>&nbsp;Administrasi Bisnis Internasional</td>
+         <td>&nbsp;1</td>
+      </tr>
+      <tr>
+         <td>&nbsp;12</td>
+         <td>&nbsp;Reza Prasasti</td>
+         <td>&nbsp;3.75</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;5</td>
+      </tr>
+      <tr>
+         <td>&nbsp;13</td>
+         <td>&nbsp;Rahmat Hidayat</td>
+         <td>&nbsp;3.73</td>
+         <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;5</td>
+      </tr>
+      <tr>
+         <td>&nbsp;14</td>
+         <td>&nbsp;Edenia Ulfa Putri Maharani</td>
+         <td>&nbsp;3.72</td>
+         <td>&nbsp;Administrasi Bisnis Internasional</td>
+         <td>&nbsp;5</td>
+      </tr>
+      <tr>
+         <td>&nbsp;15</td>
+         <td>&nbsp;Sahwala Istikomariah</td>
+         <td>&nbsp;3.72</td>
+         <td>&nbsp;Administrasi Bisnis Internasional</td>
+         <td>&nbsp;3</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;16</td>
+         <td>&nbsp;Bella Puspita</td>
+         <td>&nbsp;3.71</td>
+		 <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;1</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;17</td>
+         <td>&nbsp;Muhammad Hafidz Fauzi</td>
+         <td>&nbsp;3.70</td>
+		 <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;3</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;18</td>
+         <td>&nbsp;Muhammad Daffa Firdaus</td>
+         <td>&nbsp;3.70</td>
+		 <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;1</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;19</td>
+         <td>&nbsp;Muhammad Rizgki Fadreano</td>
+         <td>&nbsp;3.68</td>
+         <td>&nbsp;Administrasi Bisnis Internasional</td>
+         <td>&nbsp;7</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;20</td>
+         <td>&nbsp;Rafikah Nadhif Maulidina</td>
+         <td>&nbsp;3.68</td>
+		 <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;5</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;21</td>
+         <td>&nbsp;Murdi Dayu Pratama</td>
+         <td>&nbsp;3.68</td>
+		 <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;3</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;22</td>
+         <td>&nbsp;Elok Artha Kinasih</td>
+         <td>&nbsp;3.68</td>
+		 <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;3</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;23</td>
+         <td>&nbsp;Meisya Dwi Ananda</td>
+         <td>&nbsp;3.67</td>
+         <td>&nbsp;Administrasi Bisnis</td>
+         <td>&nbsp;5</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;24</td>
+         <td>&nbsp;Vita Widyasari</td>
+         <td>&nbsp;3.67</td>
+		 <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;1</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;25</td>
+         <td>&nbsp;Rajwa Nailal Khusna</td>
+         <td>&nbsp;3.66</td>
+		 <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;1</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;26</td>
+         <td>&nbsp;Sari Dewi Fatimah</td>
+         <td>&nbsp;3.65</td>
+         <td>&nbsp;Administrasi Bisnis</td>
+         <td>&nbsp;5</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;27</td>
+         <td>&nbsp;Eka Alfiyah Rachmawati</td>
+         <td>&nbsp;3.65</td>
+		 <td>&nbsp;Komputerisasi Akuntansi</td>
+         <td>&nbsp;5</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;28</td>
+         <td>&nbsp;Ahmad Faqih Mubarok</td>
+         <td>&nbsp;3.65</td>
+		 <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;3</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;29</td>
+         <td>&nbsp;Rias Qadri Nadda Azruli</td>
+         <td>&nbsp;3.63</td>
+         <td>&nbsp;Administrasi Bisnis Internasional</td>
+         <td>&nbsp;7</td>
+      </tr>
+	  <tr>
+         <td>&nbsp;30</td>
+         <td>&nbsp;Rudy Ali Ramadhan</td>
+         <td>&nbsp;3.63</td>
+		 <td>&nbsp;Manajemen Informatika</td>
+         <td>&nbsp;5</td>
+      </tr>
+      
+    </table>
+	<br/>
+	Informasi ini dimuat berdasarkan data akademik Ganjil 2025/2026.
+
+					</div>
+				</div>
+			</div>
+
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>DIGITAL INFORMATION</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> &amp; <a href="http://blog.gessato.com/" target="_blank">Gessato</a></small>
+					</p>
+					
+					
+					
+				</div>
+			</div>
+
+		</div>
+	</footer-->
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
