@@ -1,423 +1,304 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Digital Information</title>
-	
-	<style>
-        table {
-            border-collapse: collapse;
-			width: 100%;
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digital Information - Leaderboard IPK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS External bawaan template -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <!-- Style Tambahan untuk Tampilan Modern -->
+    <style>
+        .leaderboard-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            margin-bottom: 30px;
         }
-        table, th, td {
-            border: 1px solid black;
+
+        /* Top 3 Podium Cards */
+        .top-rank-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
         }
-        th, td {
-            padding: 10px;
+        .top-card {
+            flex: 1;
+            min-width: 220px;
+            border-radius: 10px;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-        th {
-            background-color: GREY;
-            color: white;
+        .rank-1 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+        .rank-2 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+        .rank-3 { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); }
+        .top-card .badge-rank {
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(255,255,255,0.3);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
         }
-		tr:hover {background-color: #f5f5f5;}
+        .top-card h4 { color: #fff; margin: 5px 0; font-size: 16px; font-weight: bold; }
+        .top-card p { margin: 0; font-size: 13px; opacity: 0.9; }
+        .top-card .ipk-val { font-size: 22px; font-weight: bold; margin-top: 8px; }
+
+        /* Filter & Sorting Controls */
+        .control-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .control-bar input, .control-bar select {
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+        .control-bar input { flex: 2; min-width: 200px; }
+        .control-bar select { flex: 1; min-width: 160px; }
+
+        /* Modern Table */
+        .custom-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+        }
+        .custom-table th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 12px 15px;
+            text-align: left;
+            border: none;
+        }
+        .custom-table th:first-child { border-radius: 6px 0 0 6px; }
+        .custom-table th:last-child { border-radius: 0 6px 6px 0; }
+
+        .custom-table tbody tr {
+            background-color: #f9f9f9;
+            transition: all 0.2s ease;
+        }
+        .custom-table tbody tr:hover {
+            background-color: #f0f4f8;
+            transform: translateY(-2px);
+        }
+        .custom-table td {
+            padding: 12px 15px;
+            border: none;
+            border-top: 1px solid #eef0f2;
+            border-bottom: 1px solid #eef0f2;
+        }
+        .custom-table td:first-child { border-left: 1px solid #eef0f2; border-radius: 6px 0 0 6px; font-weight: bold; }
+        .custom-table td:last-child { border-right: 1px solid #eef0f2; border-radius: 0 6px 6px 0; }
+
+        .badge-ipk {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
     </style>
-	
-	<!-- dibawah ini script auto ke halaman tertentu setelah beberapa detik/menit -->
-	<meta http-equiv="refresh" content="300;url=index.html">
-	<!-- angka 300 berarti detik (300 detik = 5 menit) dan index.html adalah halaman beranda, ubah sesuai kebutuhan-->
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FreeHTML5.co" />
+</head>
+<body>
+    <div class="fh5co-loader"></div>
 
-	<!-- 
-	//////////////////////////////////////////////////////
+    <div id="page">
+        <!-- Navbar Header -->
+        <nav class="fh5co-nav" role="navigation">
+            <div class="container">
+                <div class="fh5co-top-logo">
+                    <div id="fh5co-text">
+                        <div id="jam" style="padding:5px;width:auto;"></div>
+                    </div>
+                </div>
+                <div class="fh5co-top-menu menu-1 text-center">
+                    <ul>
+                        <li><b>IPK LEADERBOARD</b></li>
+                    </ul>
+                </div>
+                <div class="fh5co-top-social menu-1 text-right">
+                    <ul class="fh5co-social">
+                        <li><a href="3-akademik.html"><font size='3'>KEMBALI</font> <b><font color='red'>[X]</font></b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+        <!-- Main Content -->
+        <div class="container" style="margin-top: 30px;">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="leaderboard-card animate-box">
+                        <h3 style="text-align: center; margin-bottom: 5px; font-weight: bold;">TOP 30 MAHASISWA</h3>
+                        <p style="text-align: center; color: #666; margin-bottom: 25px;">Dengan IPK Terbaik di Semester Genap 2025/2026</p>
 
-	//////////////////////////////////////////////////////
-	 -->
+                        <!-- Podia Top 3 Highlight -->
+                        <div class="top-rank-container" id="podium-container"></div>
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+                        <!-- Bar Filter & Sortir -->
+                        <div class="control-bar">
+                            <input type="text" id="search-input" placeholder="Cari Nama Mahasiswa..." oninput="filterData()">
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+                            <select id="prodi-filter" onchange="filterData()">
+                                <option value="">Semua Program Studi</option>
+                                <option value="Manajemen Informatika">Manajemen Informatika</option>
+                                <option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+                                <option value="Administrasi Bisnis Internasional">Administrasi Bisnis Internasional</option>
+                                <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                            </select>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+                            <select id="sort-order" onchange="filterData()">
+                                <option value="ipk-desc">IPK (Tertinggi ke Terendah)</option>
+                                <option value="ipk-asc">IPK (Terendah ke Tertinggi)</option>
+                                <option value="name-asc">Nama (A - Z)</option>
+                            </select>
+                        </div>
 
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="fh5co-top-logo">
-				
-				<div id="fh5co-text">
-					<script type="text/javascript">
-					window.setTimeout("renderDate()",1);
-					function renderDate(){
-					var mydate = new Date();
-					var year = mydate.getYear();
-					if (year < 2000) {
-					if (document.all)
-					year = "19" + year;
-					else
-					year += 1900;
-					}
-					var day = mydate.getDay();
-					var month = mydate.getMonth();
-					var daym = mydate.getDate();
-					if (daym < 10)
-					daym = "0" + daym;
-					var hours = mydate.getHours();
-					var minutes = mydate.getMinutes();
-					var seconds = mydate.getSeconds();
-					var dn = "WIB";
-					if (hours >= 24) {
-					dn = "WIB";
-					hours = hours - 12;
-					}
-					if (hours == 0)
-					hours = 0;
-					if (hours <= 9)
-					hours = "0" + hours;
-					if (minutes <= 9)
-					minutes = "0" + minutes;
-					if (seconds <= 9)
-					seconds = "0" + seconds;
-					document.getElementById("jam").innerHTML = " "+"<b>"+hours+":"+minutes+":"+seconds+"</b> "+dn;setTimeout("renderDate()",1000)
-					}
-					</script>
-					<div id="jam" style="padding:5px;width:auto;"></div>
-				</div>
-			</div>
-			
-			<div class="fh5co-top-menu menu-1 text-center">
-				<ul>
-					<li>
-						<b>IPK LEADERBOARD</b>
-					</li>
-				</ul>
-			</div>
-			
-			<div class="fh5co-top-social menu-1 text-right">
-				<ul class="fh5co-social">
-					<li><a href="3-akademik.html"><font size='3'>KEMBALI</font> <b><font color='red'>[X]</font></b></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+                        <!-- Tabel Utama -->
+                        <div class="table-responsive">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>POSISI</th>
+                                        <th>NAMA MAHASISWA</th>
+                                        <th>PROGRAM STUDI</th>
+                                        <th>SEMESTER</th>
+                                        <th>IPK</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="student-table-body">
+                                    <!-- Baris data diisi oleh JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="testimony animate-box">
-					<b>TOP 30 MAHASISWA</b>
-					<p>Dengan IPK Terbaik di Semester Berjalan
-					
-	<table>
-        <tr>
-            <th>&nbsp;POSISI</th>
-            <th>&nbsp;NAMA MAHASISWA</th>
-            <th>&nbsp;IPK</th>
-            <th>&nbsp;PROGRAM STUDI</th>
-			<th>&nbsp;SEMESTER</th>
-        </tr>
-        <tr>
-         <td>&nbsp;01</td>
-         <td>&nbsp;M. Nurfathan Athaillah Humaidi</td>
-         <td>&nbsp;3.95</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;5</td>
-      </tr>
-      <tr>
-         <td>&nbsp;02</td>
-         <td>&nbsp;Hikmal Maulana Fajar</td>
-         <td>&nbsp;3.86</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;5</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;03</td>
-         <td>&nbsp;Zulfan Al Fauzan</td>
-         <td>&nbsp;3.85</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;3</td>
-      </tr>
-      <tr>
-         <td>&nbsp;04</td>
-         <td>&nbsp;Ridho Fatu Rohman</td>
-         <td>&nbsp;3.85</td>
-         <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;1</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;05</td>
-         <td>&nbsp;Raisya Salsabila Pratama</td>
-         <td>&nbsp;3.84</td>
-         <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;1</td>
-      </tr>
-      <tr>
-         <td>&nbsp;06</td>
-         <td>&nbsp;Adinda Dwi Rahma Putri</td>
-         <td>&nbsp;3.81</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;3</td>
-      </tr>
-      <tr>
-         <td>&nbsp;07</td>
-         <td>&nbsp;Nining Suningsih</td>
-         <td>&nbsp;3.78</td>
-         <td>&nbsp;Administrasi Bisnis Internasional</td>
-         <td>&nbsp;5</td>
-      </tr>
-      <tr>
-         <td>&nbsp;08</td>
-         <td>&nbsp;Nabila Kurniawati</td>
-         <td>&nbsp;3.78</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;3</td>
-      </tr>
-      <tr>
-         <td>&nbsp;09</td>
-         <td>&nbsp;Chelsea Putri Rahayu</td>
-         <td>&nbsp;3.78</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;1</td>
-      </tr>
-      <tr>
-         <td>&nbsp;10</td>
-         <td>&nbsp;Eka Putra Ananda</td>
-         <td>&nbsp;3.76</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;1</td>
-      </tr>
-      <tr>
-         <td>&nbsp;11</td>
-         <td>&nbsp;Mochamad Fauzan Fadhillah</td>
-         <td>&nbsp;3.76</td>
-         <td>&nbsp;Administrasi Bisnis Internasional</td>
-         <td>&nbsp;1</td>
-      </tr>
-      <tr>
-         <td>&nbsp;12</td>
-         <td>&nbsp;Reza Prasasti</td>
-         <td>&nbsp;3.75</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;5</td>
-      </tr>
-      <tr>
-         <td>&nbsp;13</td>
-         <td>&nbsp;Rahmat Hidayat</td>
-         <td>&nbsp;3.73</td>
-         <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;5</td>
-      </tr>
-      <tr>
-         <td>&nbsp;14</td>
-         <td>&nbsp;Edenia Ulfa Putri Maharani</td>
-         <td>&nbsp;3.72</td>
-         <td>&nbsp;Administrasi Bisnis Internasional</td>
-         <td>&nbsp;5</td>
-      </tr>
-      <tr>
-         <td>&nbsp;15</td>
-         <td>&nbsp;Sahwala Istikomariah</td>
-         <td>&nbsp;3.72</td>
-         <td>&nbsp;Administrasi Bisnis Internasional</td>
-         <td>&nbsp;3</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;16</td>
-         <td>&nbsp;Bella Puspita</td>
-         <td>&nbsp;3.71</td>
-		 <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;1</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;17</td>
-         <td>&nbsp;Muhammad Hafidz Fauzi</td>
-         <td>&nbsp;3.70</td>
-		 <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;3</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;18</td>
-         <td>&nbsp;Muhammad Daffa Firdaus</td>
-         <td>&nbsp;3.70</td>
-		 <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;1</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;19</td>
-         <td>&nbsp;Muhammad Rizgki Fadreano</td>
-         <td>&nbsp;3.68</td>
-         <td>&nbsp;Administrasi Bisnis Internasional</td>
-         <td>&nbsp;7</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;20</td>
-         <td>&nbsp;Rafikah Nadhif Maulidina</td>
-         <td>&nbsp;3.68</td>
-		 <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;5</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;21</td>
-         <td>&nbsp;Murdi Dayu Pratama</td>
-         <td>&nbsp;3.68</td>
-		 <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;3</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;22</td>
-         <td>&nbsp;Elok Artha Kinasih</td>
-         <td>&nbsp;3.68</td>
-		 <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;3</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;23</td>
-         <td>&nbsp;Meisya Dwi Ananda</td>
-         <td>&nbsp;3.67</td>
-         <td>&nbsp;Administrasi Bisnis</td>
-         <td>&nbsp;5</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;24</td>
-         <td>&nbsp;Vita Widyasari</td>
-         <td>&nbsp;3.67</td>
-		 <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;1</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;25</td>
-         <td>&nbsp;Rajwa Nailal Khusna</td>
-         <td>&nbsp;3.66</td>
-		 <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;1</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;26</td>
-         <td>&nbsp;Sari Dewi Fatimah</td>
-         <td>&nbsp;3.65</td>
-         <td>&nbsp;Administrasi Bisnis</td>
-         <td>&nbsp;5</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;27</td>
-         <td>&nbsp;Eka Alfiyah Rachmawati</td>
-         <td>&nbsp;3.65</td>
-		 <td>&nbsp;Komputerisasi Akuntansi</td>
-         <td>&nbsp;5</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;28</td>
-         <td>&nbsp;Ahmad Faqih Mubarok</td>
-         <td>&nbsp;3.65</td>
-		 <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;3</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;29</td>
-         <td>&nbsp;Rias Qadri Nadda Azruli</td>
-         <td>&nbsp;3.63</td>
-         <td>&nbsp;Administrasi Bisnis Internasional</td>
-         <td>&nbsp;7</td>
-      </tr>
-	  <tr>
-         <td>&nbsp;30</td>
-         <td>&nbsp;Rudy Ali Ramadhan</td>
-         <td>&nbsp;3.63</td>
-		 <td>&nbsp;Manajemen Informatika</td>
-         <td>&nbsp;5</td>
-      </tr>
-      
-    </table>
-	<br/>
-	Informasi ini dimuat berdasarkan data akademik Ganjil 2025/2026.
+    <!-- Script Jam Digital Bawaan -->
+    <script type="text/javascript">
+        window.setTimeout("renderDate()",1);
+        function renderDate(){
+            var mydate = new Date();
+            var hours = mydate.getHours();
+            var minutes = mydate.getMinutes();
+            var seconds = mydate.getSeconds();
+            var dn = "WIB";
+            if (hours <= 9) hours = "0" + hours;
+            if (minutes <= 9) minutes = "0" + minutes;
+            if (seconds <= 9) seconds = "0" + seconds;
+            document.getElementById("jam").innerHTML = "<b>"+hours+":"+minutes+":"+seconds+"</b> "+dn;
+            setTimeout("renderDate()",1000);
+        }
+    </script>
 
-					</div>
-				</div>
-			</div>
+  <!-- Library JS Bawaan Template -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/main.js"></script>
 
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>DIGITAL INFORMATION</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!--footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> &amp; <a href="http://blog.gessato.com/" target="_blank">Gessato</a></small>
-					</p>
-					
-					
-					
-				</div>
-			</div>
+<!-- File Data IPK -->
+<script src="js/data_ipk.js"></script>
 
-		</div>
-	</footer-->
-	</div>
+    <!-- 2. SCRIPT TAMPILAN & INTERAKSI -->
+    <script>
+        function renderPodium(top3) {
+            const container = document.getElementById("podium-container");
+            if (!top3 || top3.length < 3) {
+                container.style.display = "none";
+                return;
+            }
+            container.style.display = "flex";
+            container.innerHTML = `
+                <div class="top-card rank-1">
+                    <div class="badge-rank">🥇</div>
+                    <h4>${top3[0].nama}</h4>
+                    <p>${top3[0].prodi}</p>
+                    <div class="ipk-val">${top3[0].ipk.toFixed(2)}</div>
+                </div>
+                <div class="top-card rank-2">
+                    <div class="badge-rank">🥈</div>
+                    <h4>${top3[1].nama}</h4>
+                    <p>${top3[1].prodi}</p>
+                    <div class="ipk-val">${top3[1].ipk.toFixed(2)}</div>
+                </div>
+                <div class="top-card rank-3">
+                    <div class="badge-rank">🥉</div>
+                    <h4>${top3[2].nama}</h4>
+                    <p>${top3[2].prodi}</p>
+                    <div class="ipk-val">${top3[2].ipk.toFixed(2)}</div>
+                </div>
+            `;
+        }
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
+        function renderTable(data) {
+            const tbody = document.getElementById("student-table-body");
+            tbody.innerHTML = "";
 
-	</body>
+            if(data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding: 20px;">Data tidak ditemukan</td></tr>`;
+                return;
+            }
+
+            data.forEach((item, index) => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>#${index + 1}</td>
+                    <td><strong>${item.nama}</strong></td>
+                    <td>${item.prodi}</td>
+                    <td>Semester ${item.semester}</td>
+                    <td><span class="badge-ipk">${item.ipk.toFixed(2)}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterData() {
+            const searchVal = document.getElementById("search-input").value.toLowerCase();
+            const prodiVal = document.getElementById("prodi-filter").value;
+            const sortVal = document.getElementById("sort-order").value;
+
+            let filtered = studentsData.filter(s => {
+                const matchesName = s.nama.toLowerCase().includes(searchVal);
+                const matchesProdi = prodiVal === "" || s.prodi === prodiVal;
+                return matchesName && matchesProdi;
+            });
+
+            if (sortVal === "ipk-desc") {
+                filtered.sort((a, b) => b.ipk - a.ipk);
+            } else if (sortVal === "ipk-asc") {
+                filtered.sort((a, b) => a.ipk - b.ipk);
+            } else if (sortVal === "name-asc") {
+                filtered.sort((a, b) => a.nama.localeCompare(b.nama));
+            }
+
+            renderTable(filtered);
+        }
+
+        // Render awal saat pertama kali dibuka
+        renderPodium(studentsData.slice(0, 3));
+        renderTable(studentsData);
+    </script>
+</body>
 </html>
-
