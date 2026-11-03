@@ -1,251 +1,430 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Digital Information</title>
-	
-	<!-- dibawah ini script auto ke halaman tertentu setelah beberapa detik/menit -->
-	<meta http-equiv="refresh" content="300;url=index.html">
-	<!-- angka 300 berarti detik (300 detik = 5 menit) dan index.html adalah halaman beranda, ubah sesuai kebutuhan-->
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FreeHTML5.co" />
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Digital Information - Jadwal Ujian Tengah Semester</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- 
-	//////////////////////////////////////////////////////
+    <!-- CSS External bawaan template -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/modernizr-2.6.2.min.js"></script>
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+    <!-- Style Tambahan Sesuai Leaderboard TOEIC & Pop-up -->
+    <style>
+      .leaderboard-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 25px;
+        margin-bottom: 30px;
+      }
 
-	//////////////////////////////////////////////////////
-	 -->
+      /* Filter Controls */
+      /* Styling Bar Filter Agar Tampak Jelas & Kontras */
+      .filter-wrapper {
+        background-color: #f1f5f9;
+        border: 2px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 18px 20px;
+        margin-bottom: 25px;
+      }
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+      .filter-wrapper .filter-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: #1e293b;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/style2.css">
+      .control-bar {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
 
-	<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+      .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
 
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="fh5co-top-logo">
-				
-				<div id="fh5co-text">
-					<script type="text/javascript">
-					window.setTimeout("renderDate()",1);
-					function renderDate(){
-					var mydate = new Date();
-					var year = mydate.getYear();
-					if (year < 2000) {
-					if (document.all)
-					year = "19" + year;
-					else
-					year += 1900;
-					}
-					var day = mydate.getDay();
-					var month = mydate.getMonth();
-					var daym = mydate.getDate();
-					if (daym < 10)
-					daym = "0" + daym;
-					var hours = mydate.getHours();
-					var minutes = mydate.getMinutes();
-					var seconds = mydate.getSeconds();
-					var dn = "WIB";
-					if (hours >= 24) {
-					dn = "WIB";
-					hours = hours - 12;
-					}
-					if (hours == 0)
-					hours = 0;
-					if (hours <= 9)
-					hours = "0" + hours;
-					if (minutes <= 9)
-					minutes = "0" + minutes;
-					if (seconds <= 9)
-					seconds = "0" + seconds;
-					document.getElementById("jam").innerHTML = " "+"<b>"+hours+":"+minutes+":"+seconds+"</b> "+dn;setTimeout("renderDate()",1000)
-					}
-					</script>
-					<div id="jam" style="padding:5px;width:auto;"></div>
-				</div>
-			</div>
-			
-			<div class="fh5co-top-menu menu-1 text-center">
-				<ul>
-					<li>
-						<b>JADWAL UJIAN</b>
-					</li>
-				</ul>
-			</div>
-			
-			<div class="fh5co-top-social menu-1 text-right">
-				<ul class="fh5co-social">
-					<li><a href="3-akademik.html"><font size='3'>KEMBALI</font> <b><font color='red'>[X]</font></b></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	<section id="gallery">
-        <div class="row no-gutters">
-			
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalabi04521.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (4).png" alt="">
-              </a>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalka04221.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (7).png" alt="">
-              </a>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalmi04421.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (9).png" alt="">
-              </a>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalabi04511.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (3).png" alt="">
-              </a>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalka04211.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (6).png" alt="">
-              </a>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalmi04411.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (8).png" alt="">
-              </a>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-4 col-md-4">
-            <div class="gallery-item wow fadeInUp">
-              <a href="images/home/akademik/jadwal/jadwalabi04531.jpg" class="gallery-popup">
-                <img src="images/home/akademik/jadwal/foto (5).png" alt="">
-              </a>
-            </div>
-          </div>
-			
+      .filter-group.search-group {
+        flex: 2;
+        min-width: 220px;
+      }
+      .filter-group.select-group {
+        flex: 1;
+        min-width: 170px;
+      }
+
+      .filter-group label {
+        font-size: 12px;
+        font-weight: 700; /* Font Ditebalkan */
+        color: #334155;
+        margin-bottom: 2px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .control-bar input,
+      .control-bar select {
+        padding: 10px 14px;
+        border: 2px solid #94a3b8; /* Border dipertebal agar terlihat jelas */
+        border-radius: 6px;
+        outline: none;
+        font-size: 14px;
+        font-weight: 600; /* Teks Pilihan Ditebalkan */
+        color: #0f172a;
+        background-color: #ffffff;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .control-bar input::placeholder {
+        color: #64748b;
+        font-weight: 500;
+      }
+
+      .control-bar input:focus,
+      .control-bar select:focus {
+        border-color: #0284c7;
+        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+      }
+
+      /* Modern Table */
+      .custom-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+      }
+      .custom-table th {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 12px 10px;
+        text-align: left;
+        border: none;
+        font-size: 13px;
+      }
+      .custom-table th:first-child {
+        border-radius: 6px 0 0 6px;
+      }
+      .custom-table th:last-child {
+        border-radius: 0 6px 6px 0;
+      }
+
+      .custom-table tbody tr {
+        background-color: #f9f9f9;
+        transition: all 0.2s ease;
+      }
+      .custom-table tbody tr:hover {
+        background-color: #f0f4f8;
+        transform: translateY(-2px);
+      }
+      .custom-table td {
+        padding: 10px 10px;
+        border: none;
+        border-top: 1px solid #eef0f2;
+        border-bottom: 1px solid #eef0f2;
+        font-size: 13px;
+      }
+      .custom-table td:first-child {
+        border-left: 1px solid #eef0f2;
+        border-radius: 6px 0 0 6px;
+        font-weight: bold;
+      }
+      .custom-table td:last-child {
+        border-right: 1px solid #eef0f2;
+        border-radius: 0 6px 6px 0;
+      }
+
+      /* Badges */
+      .badge-custom {
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .badge-normal {
+        background-color: #27ae60;
+      }
+      .badge-pjbl {
+        background-color: #e67e22;
+      }
+      .badge-pengumpulan {
+        background-color: #2980b9;
+      }
+
+      /* Style Pop-up Informasi Akademik */
+      .modal-overlay {
+        display: flex;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-content-custom {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 480px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        font-family: sans-serif;
+      }
+      .close-btn {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #888;
+      }
+      .close-btn:hover {
+        color: #000;
+      }
+      .action-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .action-btn:hover {
+        background-color: #0056b3;
+      }
+      .info-note {
+        background: #eef7ff;
+        border-left: 4px solid #007bff;
+        padding: 10px;
+        margin: 15px 0;
+        text-align: left;
+        font-size: 13px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fh5co-loader" id="loader"></div>
+
+    <!-- POPUP INFORMASI AKADEMIK (UTS) -->
+    <div id="uts-modal" class="modal-overlay">
+      <div class="modal-content-custom">
+        <span class="close-btn" onclick="closeUtsModal()">×</span>
+        <div style="font-size: 40px; margin-bottom: 10px">📢</div>
+        <h3 style="font-weight: bold; margin-bottom: 5px">
+          INFORMASI AKADEMIK
+        </h3>
+        <p style="color: #666; font-size: 14px">
+          Jadwal Ujian Tengah Semester (UTS) Ganjil 2026/2027
+        </p>
+
+        <div class="info-note">
+          <strong>📌 Catatan Pelaksanaan:</strong><br />
+          1. Jadwal UTS resmi Politeknik LP3I Jakarta Kampus Tangerang dapat
+          dilihat di bawah.<br />
+          2. Mata Kuliah <b>PJBL</b> tidak ada ujian tatap muka.<br />
+          3. Mata Kuliah <b>Pengumpulan</b> hanya menyerahkan penugasan.
         </div>
 
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>DIGITAL INFORMATION</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-
+        <button class="action-btn" onclick="closeUtsModal()">
+          LIHAT JADWAL UJIAN
+        </button>
       </div>
-    </section>
-	
-	</div>
-	
-	<!--footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> &amp; <a href="http://blog.gessato.com/" target="_blank">Gessato</a></small>
-					</p>
-					
-					
-					
-				</div>
-			</div>
+    </div>
 
-		</div>
-	</footer-->
-	</div>
+    <div id="page">
+      <!-- Navbar Header -->
+      <nav class="fh5co-nav" role="navigation">
+        <div class="container">
+          <div class="fh5co-top-logo">
+            <div id="fh5co-text">
+              <div id="jam" style="padding: 5px; width: auto"></div>
+            </div>
+          </div>
+          <div class="fh5co-top-menu menu-1 text-center">
+            <ul>
+              <li><b>JADWAL UJIAN TENGAH SEMESTER</b></li>
+            </ul>
+          </div>
+          <div class="fh5co-top-social menu-1 text-right">
+            <ul class="fh5co-social">
+              <li>
+                <a href="3-akademik.html"
+                  ><font size="3">KEMBALI</font>
+                  <b><font color="red">[X]</font></b></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	
-	<script src="lib/wow/wow.min.js"></script>
-	
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script src="js/main2.js"></script>
+      <!-- Main Content Container -->
+      <div class="container" style="margin-top: 30px">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="leaderboard-card animate-box">
+              <h3
+                style="
+                  text-align: center;
+                  margin-bottom: 5px;
+                  font-weight: bold;
+                "
+              >
+                JADWAL UTS GANJIL 2026/2027
+              </h3>
+              <p style="text-align: center; color: #666; margin-bottom: 25px">
+                Politeknik LP3I Jakarta Kampus Tangerang
+              </p>
 
-	</body>
+              <!-- Bar Filter & Pencarian -->
+              <!-- Bar Filter & Pencarian yang Dipertebal & Diperjelas -->
+              <div class="filter-wrapper">
+                <div class="filter-title">
+                  🔍 <span>FILTER & PENCARIAN JADWAL</span>
+                </div>
+                <div class="control-bar">
+                  <div class="filter-group search-group">
+                    <label for="search-input">CARI MATA KULIAH / DOSEN</label>
+                    <input
+                      type="text"
+                      id="search-input"
+                      placeholder="Ketik nama matkul, dosen, atau kelas..."
+                      oninput="filterJadwalData()"
+                    />
+                  </div>
+
+                  <div class="filter-group select-group">
+                    <label for="class-filter">PILIH KODE KELAS</label>
+                    <select id="class-filter" onchange="filterJadwalData()">
+                      <option value="">Semua Kode Kelas</option>
+                      <option value="4211">Kelas 04211 (KA Smt 1)</option>
+                      <option value="4221">Kelas 04221 (KA Smt 3)</option>
+                      <option value="4411">Kelas 04411 (MI Smt 1)</option>
+                      <option value="4421">Kelas 04421 (MI Smt 3)</option>
+                      <option value="4511">Kelas 04511 (ABI Smt 1)</option>
+                      <option value="4521">Kelas 04521 (ABI Smt 3)</option>
+                      <option value="4531">Kelas 04531 (ABI Smt 5)</option>
+                    </select>
+                  </div>
+
+                  <div class="filter-group select-group">
+                    <label for="day-filter">PILIH HARI UJIAN</label>
+                    <select id="day-filter" onchange="filterJadwalData()">
+                      <option value="">Semua Hari</option>
+                      <option value="Senin">Senin</option>
+                      <option value="Selasa">Selasa</option>
+                      <option value="Rabu">Rabu</option>
+                      <option value="Kamis">Kamis</option>
+                      <option value="Jumat">Jum'at</option>
+                      <option value="Sabtu">Sabtu</option>
+                      <option value="-">Non-Ujian (PJBL / Penugasan)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tabel Utama Jadwal Ujian -->
+              <div class="table-responsive">
+                <table class="custom-table">
+                  <thead>
+                    <tr>
+                      <th>NO</th>
+                      <th style="text-align: center">KELAS</th>
+                      <th>HARI</th>
+                      <th style="text-align: center">TANGGAL</th>
+                      <th style="text-align: center">WAKTU</th>
+                      <th>MATA KULIAH</th>
+                      <th>DOSEN PENGAMPU</th>
+                      <th style="text-align: center">RUANG</th>
+                      <th style="text-align: center">SKS</th>
+                      <th style="text-align: center">KETERANGAN</th>
+                    </tr>
+                  </thead>
+                  <tbody id="jadwal-table-body">
+                    <!-- Baris data diisi oleh JS -->
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-muted" style="font-size: 12px; margin-top: 15px">
+                <i
+                  >* Keterangan: <b>PJBL</b> (Tidak ada ujian karena praktikum
+                  dosen), <b>Pengumpulan</b> (Menyerahkan hasil penugasan).</i
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Jam Digital Bawaan -->
+    <script type="text/javascript">
+      window.setTimeout("renderDate()", 1);
+      function renderDate() {
+        var mydate = new Date();
+        var hours = mydate.getHours();
+        var minutes = mydate.getMinutes();
+        var seconds = mydate.getSeconds();
+        var dn = "WIB";
+        if (hours <= 9) hours = "0" + hours;
+        if (minutes <= 9) minutes = "0" + minutes;
+        if (seconds <= 9) seconds = "0" + seconds;
+        document.getElementById("jam").innerHTML =
+          "<b>" + hours + ":" + minutes + ":" + seconds + "</b> " + dn;
+        setTimeout("renderDate()", 1000);
+      }
+    </script>
+
+    <!-- Library JS Bawaan Template -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- File Data Jadwal Terpisah -->
+    <script src="js/data_jadwal.js"></script>
+
+    <!-- Script Pop-up & Render Table -->
+    <script>
+      function closeUtsModal() {
+        document.getElementById("uts-modal").style.display = "none";
+      }
+
+      $(document).ready(function () {
+        $(".fh5co-loader").fadeOut("slow");
+
+        if (typeof jadwalExamData !== "undefined") {
+          renderTableJadwal(jadwalExamData);
+        }
+
+        window.onclick = function (event) {
+          var modal = document.getElementById("uts-modal");
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      });
+    </script>
+  </body>
 </html>
-
